@@ -27,7 +27,7 @@ export default function Home() {
       <main className={styles.main}>
         <Link href='/prefetched-on-viewport'>This route will be prefetched automatically.</Link>
         <button disabled onClick={prefetchViaRouter}>Click this to prefetch <code>/prefetched-via-router</code> without navigating to it.</button>
-        {prefetchedViaRouter && <a href='/prefetched-via-router'>This route will be prefetched when you click this link.</a>}
+        {prefetchedViaRouter && <Link href='/prefetched-via-router' prefetch={false}>This route will be prefetched when you click this link.</Link>}
       </main>
     </>
   )
